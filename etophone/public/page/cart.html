@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giỏ hàng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/cart.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/banner.css">
+    <link rel="stylesheet" href="../assets/css/toast.css">
+    <link rel="stylesheet" href="../assets/css/search.css">
+    <link rel="stylesheet" href="../assets/css/product.css">
+    <link rel="stylesheet" href="../assets/css/productModal.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+<body>
+    <div id="app"></div>
+<div class="cart-container">
+    <div class="cart-header">
+        <div class="cart-title">Giỏ hàng của bạn</div>
+        <button class="back-btn" id="backBtn">Mua sản phẩm khác</button>
+    </div>
+    <div id="cart-content"></div>
+    <div class="cart-summary" id="cart-summary" style="display: none;">
+        <span class="summary-label">Tổng sản phẩm đã chọn:</span>
+        <span class="summary-value" id="total-selected">0</span>
+        <span class="summary-label">Tổng tiền:</span>
+        <span class="summary-value" id="total-money">0₫</span>
+        <button class="checkout-btn" id="checkoutBtn" disabled>Thanh toán</button>
+    </div>
+</div>
+<script type="module" src="../assets/js/cart.js"></script>
+</body>
+</html>

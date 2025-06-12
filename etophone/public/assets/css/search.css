@@ -1,0 +1,183 @@
+/* Container for search results */
+.search-results-container {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Để nút "x" nằm trong container */
+}
+
+/* Title for search results */
+.search-results-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: left;
+}
+
+/* Grid layout for results */
+.search-results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Hiển thị 4 sản phẩm mỗi hàng */
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
+    justify-content: center; /* Căn giữa các sản phẩm */
+}
+
+/* Individual product card */
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Product image */
+.product-card img {
+    width: 100%;
+    height: 200px; /* Tăng kích thước ảnh */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border-bottom: 1px solid #ddd;
+}
+
+/* Badge for promotions or highlights */
+.product-card .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Product name */
+.product-card h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+    margin: 10px 0;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* Product price */
+.product-card .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: green;
+    margin: 10px 0;
+}
+
+/* Old price (strikethrough) */
+.product-card .old-price {
+    font-size: 14px;
+    color: #777;
+    text-decoration: line-through;
+    margin-bottom: 10px;
+}
+
+/* Info buttons (e.g., warranty, installment) */
+.product-card .info-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.product-card .info-buttons span {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.product-card .info-buttons .warranty {
+    background: #f0a500;
+}
+
+.product-card .info-buttons .installment {
+    background: #28a745;
+}
+
+/* Dropdown for sorting */
+.sort-options {
+    display: block;
+    margin: 10px 0 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.pagination button {
+    background: #fff;
+    color: #000;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.pagination button:hover {
+    background: red;
+    color: white;
+}
+
+.pagination button.active {
+    background: red;
+    color: white;
+    border: 1px solid red;
+}
+
+/* Close search button */
+.close-search {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px; /* Canh góc trên bên phải */
+    right: 10px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

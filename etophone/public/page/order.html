@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đặt hàng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/order.css">
+     <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/banner.css">
+    <link rel="stylesheet" href="../assets/css/toast.css">
+    <link rel="stylesheet" href="../assets/css/search.css">
+    <link rel="stylesheet" href="../assets/css/product.css">
+    <link rel="stylesheet" href="../assets/css/productModal.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+<body>
+    <div id="app"></div>
+<div class="order-container">
+    <div class="order-header">
+        <div class="order-title">Đặt hàng</div>
+        <button class="back-btn" id="backBtn">Mua sản phẩm khác</button>
+    </div>
+    <div id="order-product-content"></div>
+    <form id="orderForm" autocomplete="off">
+        <div class="form-section">
+            <div class="form-title">Thông tin nhận hàng</div>
+            <div class="form-grid">
+                <div>
+                    <label>Họ tên</label>
+                    <input type="text" name="fullname" required>
+                </div>
+                <div>
+                    <label>Số điện thoại</label>
+                    <input type="text" name="phone_number">
+                </div>
+            </div>
+            <div class="form-grid">
+                <div>
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div>
+                    <label>Tỉnh/Thành phố</label>
+                    <select id="province" name="province" required></select>
+                </div>
+            </div>
+            <div class="form-grid">
+                <div>
+                    <label>Quận/Huyện</label>
+                    <select id="district" name="district" required></select>
+                </div>
+                <div>
+                    <label>Xã/Phường</label>
+                    <select id="ward" name="ward" required></select>
+                </div>
+            </div>
+            <div>
+                <label>Địa chỉ chi tiết</label>
+                <input type="text" name="detail_address" required placeholder="Thôn/Đội/Số nhà...">
+            </div>
+        </div>
+        <div class="order-summary">
+            <span class="summary-label">Tổng tiền:</span>
+            <span class="summary-value" id="order-total"></span>
+        </div>
+        <button type="submit" class="pay-btn">Thanh toán ngay</button>
+    </form>
+</div>
+<script type="module" src="../assets/js/order.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+.toast {
+    position: fixed;
+    top: 20px; /* Đặt ở phía trên màn hình */
+    left: 50%; /* Căn giữa theo chiều ngang */
+    transform: translateX(-50%); /* Dịch chuyển để căn giữa hoàn hảo */
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 14px;
+    animation: fadeInOut 3s ease-in-out;
+}
+.custom-toast {
+    visibility: hidden;
+    min-width: 220px;
+    background: #2563eb;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 14px 22px;
+    position: fixed;
+    z-index: 10000;
+    right: 32px;
+    bottom: 32px;
+    font-size: 1rem;
+    transform: translateY(40px) scale(0.95);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+    box-shadow: 0 4px 18px 0 rgba(45, 98, 202, 0.15);
+    pointer-events: none;
+}
+
+.custom-toast.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px) scale(1.08);
+}
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -20px); /* Dịch chuyển lên trên */
+    }
+    10%,
+    90% {
+        opacity: 1;
+        transform: translate(-50%, 0); /* Hiển thị ở vị trí cố định */
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -20px); /* Biến mất */
+    }
+}

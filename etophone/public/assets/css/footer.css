@@ -1,0 +1,119 @@
+.footer-spa {
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+    padding: 36px 0 32px 0;
+    font-size: 15px;
+    color: #111;
+    margin-top: 32px;
+    width: 100%;
+}
+
+.footer-spa .footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.footer-spa .footer-col {
+    flex: 1;
+    min-width: 190px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-spa .footer-col ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-spa .footer-col li {
+    margin-bottom: 8px;
+}
+
+.footer-spa .footer-col a {
+    color: #111;
+    text-decoration: none;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+.footer-spa .footer-col a:hover {
+    color: #d70018;
+    text-decoration: underline;
+}
+
+.footer-spa .footer-social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+.footer-spa .footer-social a {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: #111;
+    font-size: 15px;
+    text-decoration: none;
+    background: #f5f5f5;
+    border-radius: 2px;
+    padding: 2px 8px;
+    transition: background 0.2s;
+}
+.footer-spa .footer-social a img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+.footer-spa .footer-social a:hover {
+    background: #ffeaea;
+    color: #d70018;
+}
+
+.footer-spa .footer-payment {
+    margin-top: 12px;
+}
+.footer-spa .footer-payment-label {
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 7px;
+    display: block;
+}
+.footer-spa .footer-payment-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer-spa .footer-payment-icons img {
+    height: 34px;
+    width: auto;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+    padding: 2px 8px;
+}
+
+.footer-spa .footer-verified {
+    margin-top: 12px;
+}
+.footer-spa .footer-verified img {
+    height: 34px;
+    width: auto;
+    border-radius: 4px;
+    background: #fff;
+}
+@media (max-width: 900px) {
+    .footer-spa .footer-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .footer-spa .footer-col {
+        min-width: unset;
+    }
+}
